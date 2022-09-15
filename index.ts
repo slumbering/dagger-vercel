@@ -52,7 +52,8 @@ const resolvers = {
         try {
           const {stdout} = await execa(
             "vercel",
-            ["deploy", args.build, "--name", args.siteName, "--token", token, "--scope", args.teamId, "-y" ],
+            ["-v" ],
+            //["deploy", args.build, "--name", args.siteName, "--token", token, "--scope", args.teamId, "-y" ],
             {
               stderr: "inherit",
               cwd: path.join("/mnt/contents", args.subdir),
