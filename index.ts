@@ -17,8 +17,8 @@ const resolvers = {
       token: SecretID;
       teamId: string | "";
     }) => {
-      process.env["PATH"] =
-      "/src/examples/vercel/ts/node_modules/.bin:" + process.env["PATH"];
+      process.env.PATH =
+      `/node_modules/.bin:${process.env.PATH}`;
       process.env["HOME"] = "/tmp";
 
       const token = await core
@@ -50,6 +50,7 @@ const resolvers = {
         }
 
         try {
+          await execa("direnv", ["allow"]);
           const {stdout} = await execa(
             "vercel",
             ["deploy", args.build, "--name", args.siteName, "--token", token, "--scope", args.teamId, "-y" ],
