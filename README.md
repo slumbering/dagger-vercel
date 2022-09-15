@@ -1,5 +1,5 @@
 # dagger-vercel
-A dagger extension for Vercel 
+A dagger extension for Vercel deployment
 
 ## Supported Commands
 - subdir: **String** (ex: ".")
