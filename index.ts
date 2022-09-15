@@ -50,11 +50,9 @@ const resolvers = {
         }
 
         try {
-          await execa("direnv", ["allow"]);
           const {stdout} = await execa(
-            "vercel",
-            ["-v" ],
-            //["deploy", args.build, "--name", args.siteName, "--token", token, "--scope", args.teamId, "-y" ],
+            "./node_modules/.bin/vercel", // TODO: Fix it and use vercel directly
+            ["deploy", args.build, "--name", args.siteName, "--token", token, "--scope", args.teamId, "-y" ],
             {
               stderr: "inherit",
               cwd: path.join("/mnt/contents", args.subdir),
