@@ -18,7 +18,7 @@ const resolvers = {
       teamId: string | "";
     }) => {
       process.env.PATH =
-      `/node_modules/.bin:${process.env.PATH}`;
+      `/src/node_modules/.bin:${process.env.PATH}`;
       process.env["HOME"] = "/tmp";
 
       const token = await core
@@ -51,7 +51,7 @@ const resolvers = {
 
         try {
           const {stdout} = await execa(
-            "./node_modules/.bin/vercel", // TODO: Fix it and use vercel directly
+            "vercel",
             ["deploy", args.build, "--name", args.siteName, "--token", token, "--scope", args.teamId, "-y" ],
             {
               stderr: "inherit",
