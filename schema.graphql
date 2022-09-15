@@ -1,0 +1,29 @@
+extend type Query {
+  vercel: Vercel!
+}
+
+type Vercel {
+  deploy(
+    contents: FSID!
+    subdir: String
+    siteName: String
+    token: SecretID!
+    teamId: String
+    build: String
+  ): SiteURLs!
+}
+
+type SiteURLs {
+  deployURL: String!
+  logsURL: String
+}
+
+extend type Filesystem {
+  vercelDeploy(
+    subdir: String
+    siteName: String
+    token: SecretID!
+    teamId: String
+    build: String
+  ): SiteURLs!
+}

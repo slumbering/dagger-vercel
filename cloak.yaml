@@ -1,0 +1,4 @@
+name: vercel
+extensions:
+  - path: .
+    sdk: ts
