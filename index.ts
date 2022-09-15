@@ -18,7 +18,7 @@ const resolvers = {
       teamId: string | "";
     }) => {
       process.env["PATH"] =
-      "/src/examples/vercel/ts/node_modules/.bin:" + process.env["PATH"];
+      "/node_modules/.bin:" + process.env["PATH"];
       process.env["HOME"] = "/tmp";
 
       const token = await core
