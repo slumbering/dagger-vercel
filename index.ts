@@ -51,7 +51,7 @@ const resolvers = {
 
         try {
           const {stdout} = await execa(
-            "vercel",
+            "./node_modules/.bin/vercel", // TODO: Fix it and use vercel directly
             ["deploy", args.build, "--name", args.siteName, "--token", token, "--scope", args.teamId, "-y" ],
             {
               stderr: "inherit",
