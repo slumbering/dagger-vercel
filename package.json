@@ -14,6 +14,6 @@
     "vercel": "^28.2.5"
   },
   "devDependencies": {
-    "@dagger.io/dagger": "git+ssh://git@github.com:dagger/cloak.git#main"
+    "@dagger.io/dagger": "git+https://github.com/dagger/dagger.git#cloak"
   }
 }

@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@dagger.io/dagger@git+ssh://git@github.com:dagger/cloak.git#main":
+"@dagger.io/dagger@git+https://github.com/dagger/dagger.git#cloak":
   version "1.0.0"
-  resolved "git+ssh://git@github.com:dagger/cloak.git#728513410adf6f6518c816edd857e76c0497726e"
+  resolved "git+https://github.com/dagger/dagger.git#f8b7d3a0a33f706107d2538a5579d18dbe1b91ff"
   dependencies:
     "@lifeomic/axios-fetch" "^3.0.0"
     axios "^0.27.2"
