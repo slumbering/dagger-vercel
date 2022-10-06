@@ -13,12 +13,12 @@ A dagger extension for Vercel deployment
 query deploy(
   $tokenSecret: SecretID!
 ){
-  netlifyDeploy(
+  vercelDeploy(
       subdir: "."
       siteName: $siteName
       token: $tokenSecret
       build: "out/"
-      teamId: "team_NHY3EF5Z6987pl2K1YiGtcg"
+      teamId: "team_NHY3EF5Z2434pl2K1YiGtcg"
 
   ) {
       deployURL
